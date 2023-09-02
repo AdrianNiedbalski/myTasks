@@ -1,4 +1,4 @@
-package Coursera.LogEntry;
+/*package Coursera.LogEntry;
 
 import java.util.*;
 import edu.duke.*;
@@ -35,5 +35,5 @@ public class LogAnalyzer {
         }
         return uniqueIps.size();
     }
-}
+}*/
 

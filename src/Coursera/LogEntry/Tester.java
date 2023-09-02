@@ -1,4 +1,4 @@
-package Coursera.LogEntry;
+/*package Coursera.LogEntry;
 
 import edu.duke.*;
 import java.util.*;
@@ -25,3 +25,4 @@ public class Tester
         System.out.println("There are " + la.countUniqueIPs()+ " different IPs");
     }
 }
+*/

@@ -1,10 +1,10 @@
-package Coursera.CommonWords;
-/**
+/**package Coursera.CommonWords;
+
  * Count common words in Shakespeare's works
  *
  * @author Duke Software Team
  * @version 1.0
- */
+
 import edu.duke.*;
 
 public class CommonWords
@@ -55,3 +55,4 @@ public class CommonWords
         }
     }
 }
+ */

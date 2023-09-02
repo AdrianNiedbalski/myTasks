@@ -1,4 +1,4 @@
-import edu.duke.*;
+/*import edu.duke.*;
 import java.io.File;
 
 public class PerimeterAssignmentRunner {
@@ -157,4 +157,4 @@ public class PerimeterAssignmentRunner {
         PerimeterAssignmentRunner pr = new PerimeterAssignmentRunner();
         pr.testPerimeter();
     }
-}
+}*/
