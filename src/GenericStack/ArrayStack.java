@@ -1,13 +1,14 @@
 package GenericStack;
 
+import GenericStack.FullStackException;
 import java.util.EmptyStackException;
 
-class ArrayStack<T> {
+class ArrayStack<T> implements Stack<T> {
     private T[] stackData;
-    private int buffor = 10;
+    private int buffer = 10;
     private int top = -1;
     public ArrayStack() {
-        stackData = (T[]) new Object [buffor];
+        stackData = (T[]) new Object [buffer];
     }
 
     public void push (T object) throws FullStackException {
@@ -17,7 +18,6 @@ class ArrayStack<T> {
         top++;
         stackData[top] = object;
     }
-
     public T pop() throws EmptyStackException {
         if(isEmpty()) {
             throw new EmptyStackException();
@@ -29,7 +29,7 @@ class ArrayStack<T> {
         if (isEmpty()) {
             throw new EmptyStackException();
         }
-        return stackData[top--];
+        return stackData[top];
     }
 
     public boolean isEmpty() {

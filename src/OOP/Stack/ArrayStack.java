@@ -30,7 +30,7 @@ public class ArrayStack implements Stack {
         if (isEmpty()) {
             throw new EmptyStackException();
         }
-        return stackData[top--];
+        return stackData[top];
     }
 
     @Override
