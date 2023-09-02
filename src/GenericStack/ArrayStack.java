@@ -1,15 +1,16 @@
-package OOP.Stack;
+package GenericStack;
 
 import java.util.EmptyStackException;
 
-public class ArrayStack implements Stack {
-    private String[] stackData;
+class ArrayStack<T> {
+    private T[] stackData;
     private int buffor = 10;
     private int top = -1;
-    public ArrayStack () {
-        stackData = new String[buffor];
+    public ArrayStack() {
+        stackData = (T[]) new Object [buffor];
     }
-    public void push (String object) throws FullStackException {
+
+    public void push (T object) throws FullStackException {
         if (top >= stackData.length -1) {
             throw new FullStackException();
         }
@@ -17,26 +18,24 @@ public class ArrayStack implements Stack {
         stackData[top] = object;
     }
 
-    @Override
-    public String pop() throws EmptyStackException {
+    public T pop() throws EmptyStackException {
         if(isEmpty()) {
             throw new EmptyStackException();
         }
         return stackData[top--];
     }
 
-    @Override
-    public String peek() throws EmptyStackException {
+    public T peek() throws EmptyStackException {
         if (isEmpty()) {
             throw new EmptyStackException();
         }
         return stackData[top--];
     }
 
-    @Override
     public boolean isEmpty() {
         return top == -1;
     }
 
-
 }
+
+
