@@ -34,11 +34,12 @@ public class Main{
         int methodNum = methodNumber.length;
         System.out.println("Ilosc metod: " + methodNum);
 
-
         for (Method method : methodNumber) {
+            boolean isSuper = method.isAnnotationPresent(SuperMethod.class);
             String returnType = method.getReturnType().getSimpleName();
             String methodName = method.getName();
             System.out.println("Metoda: " + methodName + ", Zwracany typ: " + returnType);
+            System.out.println("Metoda " + methodName + " jest oznaczona adnotacja 'SuperMethod' " + isSuper);
         }
 
         Field[] fields = myAdnotation.getClass().getDeclaredFields();
@@ -49,5 +50,4 @@ public class Main{
             System.out.println("Pole: " + fieldName + ", Typ: " + fieldType);
         }
         }
-
     }
