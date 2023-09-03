@@ -1,4 +1,6 @@
 package OOP.TaskAdnotacje;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 /*Zadanie 1
         Napisać dowolną klasę która ma dowlne 3-4 pola - proste i obiektowe.
@@ -21,5 +23,31 @@ public class Main{
         } catch (NoSuchMethodException e) {
             throw new RuntimeException(e);
         }
+        String className = myAdnotation.getClass().getName();
+        System.out.println("Nazwa klasy: " + className);
+
+        Constructor<?>[] constructorNumber = myAdnotation.getClass().getConstructors();
+        int constructorCount = constructorNumber.length;
+        System.out.println("Ilość konstruktorów: " + constructorCount);
+
+        Method[] methodNumber = myAdnotation.getClass().getDeclaredMethods();
+        int methodNum = methodNumber.length;
+        System.out.println("Ilosc metod: " + methodNum);
+
+
+        for (Method method : methodNumber) {
+            String returnType = method.getReturnType().getSimpleName();
+            String methodName = method.getName();
+            System.out.println("Metoda: " + methodName + ", Zwracany typ: " + returnType);
+        }
+
+        Field[] fields = myAdnotation.getClass().getDeclaredFields();
+
+        for (Field field : fields) {
+            String fieldName = field.getName();
+            String fieldType = field.getType().getSimpleName();
+            System.out.println("Pole: " + fieldName + ", Typ: " + fieldType);
+        }
+        }
+
     }
-}
