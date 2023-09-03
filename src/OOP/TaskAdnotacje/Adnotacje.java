@@ -33,4 +33,5 @@ public class Adnotacje {
     public Obiect getObiect() {
         return obiect;
     }
+
 }

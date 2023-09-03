@@ -10,9 +10,7 @@ public class Main{
             Method method = myAdnotation.getClass().getMethod("method");
             if (method.isAnnotationPresent(SuperMethod.class)) {
                 SuperMethod superMethod = method.getAnnotation(SuperMethod.class);
-
-                System.out.println("Wartosc parametru run wynosi: " + superMethod.run());
-
+                System.out.println("Wartość parametru run wynosi: " + superMethod.run());
             }
         } catch (NoSuchMethodException e) {
             throw new RuntimeException(e);
