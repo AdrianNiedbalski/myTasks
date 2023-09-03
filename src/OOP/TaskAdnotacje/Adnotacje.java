@@ -20,6 +20,7 @@ public class Adnotacje {
     }
     public Adnotacje () {
     }
+    @SuperMethod(run = true)
     public int sum () {
         return (int) (a+b);
     }

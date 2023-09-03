@@ -1,5 +1,4 @@
 package OOP.TaskAdnotacje;
-
 import java.lang.reflect.Method;
 
 public class Main{
@@ -7,15 +6,16 @@ public class Main{
         Adnotacje myAdnotation = new Adnotacje();
 
         try {
-            Method method = myAdnotation.getClass().getMethod("method");
+            Method method = myAdnotation.getClass().getMethod("sum");
             if (method.isAnnotationPresent(SuperMethod.class)) {
                 SuperMethod superMethod = method.getAnnotation(SuperMethod.class);
                 System.out.println("Wartość parametru run wynosi: " + superMethod.run());
             }
+            else {
+                System.out.println("Metoda 'sum' nie jest oznaczona adnotacją 'SuperMethod'");
+            }
         } catch (NoSuchMethodException e) {
             throw new RuntimeException(e);
         }
-
-
     }
 }
