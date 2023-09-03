@@ -26,7 +26,6 @@ public class Adnotacje {
     public String textAdd (String otherText) {
         return text + otherText;
     }
-    @SuperMethod(run = true)
     public void method () {
         System.out.println("Metoda wykonana");
     }
