@@ -1,4 +1,5 @@
 package OOP.TaskAdnotacje;
+
 /*Zadanie 1
         Napisać dowolną klasę która ma dowlne 3-4 pola - proste i obiektowe.
         Stworzyć w tej klasie dowlne 3-4 metody jakies proste które coś tam obliczają.
