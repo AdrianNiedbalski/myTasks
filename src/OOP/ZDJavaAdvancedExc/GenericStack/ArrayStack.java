@@ -7,7 +7,7 @@ class ArrayStack<T> implements Stack<T> {
     public ArrayStack() {
         stackData = (T[]) new Object [buffer];
     }
-
+    @Override
     public void push (T object) throws FullStackException {
         if (top >= stackData.length -1) {
             throw new FullStackException();
@@ -15,20 +15,21 @@ class ArrayStack<T> implements Stack<T> {
         top++;
         stackData[top] = object;
     }
+    @Override
     public T pop() throws EmptyStackException {
         if(isEmpty()) {
             throw new EmptyStackException();
         }
         return stackData[top--];
     }
-
+    @Override
     public T peek() throws EmptyStackException {
         if (isEmpty()) {
             throw new EmptyStackException();
         }
         return stackData[top];
     }
-
+    @Override
     public boolean isEmpty() {
         return top == -1;
     }
